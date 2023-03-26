@@ -1,0 +1,138 @@
+/* Mobile: 375px | Desktop: 1440px | Fontsize(paragraph): 15px */
+
+/* Colors */
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);;
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --mediumDarkBlue: hsl(212, 19%, 18%);
+    --darkBlue: hsl(213, 19%, 13%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+    background: var(--veryDarkBlue);
+    color: var(--white);
+    font-family: 'Overpass', sans-serif;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+main {
+    background: var(--darkBlue);
+    border-radius: 25px;
+}
+
+.box1, .box2 {
+    padding: 35px;
+}
+
+.box1 img {
+    background: var(--mediumDarkBlue);
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.box1 p, .box2 p:last-child {
+    font-size: 15px;
+    color: var(--mediumGrey);
+    line-height: 1.5rem;
+}
+
+.button-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.button5 {
+    background: var(--mediumDarkBlue);
+    border-radius: 50px;
+    border-style: none;
+    height: 15px;
+    width: 15px;
+    padding: 15px;
+    color: var(--mediumGrey);
+    font-weight: 700;
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    border-radius: 25px;
+    font-weight: 700;
+    border-style: none;
+    background-color: var(--orange);
+    color: var(--white);
+    width: 100%;
+    padding: 15px;
+    letter-spacing: 2px;
+}
+
+.box2 {
+    text-align: center;
+}
+
+.box2 img {
+    width: 50%;
+}
+.outof5 {
+    font-size: 15px;
+    color: var(--orange);
+    border-radius: 25px;
+    width: 60%;
+    margin: 20px auto 20px;
+    background-color: var(--mediumDarkBlue);
+    padding: 2% 1% 1%;
+}
+
+.hidden {
+    display: none;
+}
+.pressed {
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+/* Footer */
+footer { 
+    font-size: 11px; 
+    text-align: center; 
+}
+footer a {
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Desktop */
+@media screen and (min-width: 700px) {
+    main {
+        width: 28%;
+        margin: 10% auto;
+    }
+    button:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        cursor: pointer;
+    }
+    .button5:hover {
+        background-color: var(--orange);
+        color: var(--white);
+        cursor: pointer;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+    main {
+        width: 90%;
+        margin: 30% auto;
+    }
+    h1 {
+        font-weight: 700;
+    }
+}
