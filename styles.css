@@ -1,8 +1,7 @@
-/* Mobile: 375px | Desktop: 1440px | Fontsize(paragraph): 15px */
-
-/* Colors */
 :root {
+    /* Primary */
     --orange: hsl(25, 97%, 53%);
+    /* Neutral */
     --white: hsl(0, 0%, 100%);;
     --lightGrey: hsl(217, 12%, 63%);
     --mediumGrey: hsl(216, 12%, 54%);
@@ -11,128 +10,144 @@
     --veryDarkBlue: hsl(216, 12%, 8%);
 }
 
-body {
-    background: var(--veryDarkBlue);
-    color: var(--white);
-    font-family: 'Overpass', sans-serif;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-h1 {
-    margin-bottom: 0;
-    font-weight: 400;
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    background: var(--veryDarkBlue);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
     background: var(--darkBlue);
-    border-radius: 25px;
+    border-radius: 15px;
+    padding: 1.5rem 1.5rem 2rem;
+    width: 327px;
 }
 
-.box1, .box2 {
-    padding: 35px;
+/* Section Rating */
+.section-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
 }
 
-.box1 img {
+.section-rating span {
     background: var(--mediumDarkBlue);
-    padding: 10px;
+    padding: .75rem;
     border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.box1 p, .box2 p:last-child {
-    font-size: 15px;
-    color: var(--mediumGrey);
-    line-height: 1.5rem;
+.section-rating span img {
+    width: 13px;
+    height: 13px;
 }
 
-.button-flex {
+h1 {
+    font-weight: 400;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.3rem;
+    color: var(--lightGrey);
+}
+
+.section-rating > div {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
 }
 
-.button5 {
+.section-rating > div a {
     background: var(--mediumDarkBlue);
     border-radius: 50px;
     border-style: none;
-    height: 15px;
-    width: 15px;
-    padding: 15px;
+    padding-top: 5px;
+    margin-block: .5rem;
+    height: 40px;
+    width: 40px;
     color: var(--mediumGrey);
     font-weight: 700;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-rating > div a:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+    transition: .15s ease-in-out;
 }
 
 button {
-    display: block;
-    margin: 0 auto;
-    border-radius: 25px;
+    border-radius: 50px;
     font-weight: 700;
     border-style: none;
     background-color: var(--orange);
     color: var(--white);
     width: 100%;
-    padding: 15px;
+    padding: .9rem;
     letter-spacing: 2px;
 }
 
-.box2 {
-    text-align: center;
+button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+    transition: .15s ease-in-out;
 }
 
-.box2 img {
-    width: 50%;
+/* Section Thankyou */
+.section-thankyou {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-.outof5 {
-    font-size: 15px;
+
+.section-thankyou img {
+    width: 50%;
+    margin-inline: auto;
+    margin-top: .5rem;
+}
+
+.target {
     color: var(--orange);
-    border-radius: 25px;
+    border-radius: 50px;
     width: 60%;
-    margin: 20px auto 20px;
+    margin: .5rem auto;
     background-color: var(--mediumDarkBlue);
-    padding: 2% 1% 1%;
+    padding: .45rem .25rem .25rem;
+    opacity: .9;
 }
 
 .hidden {
     display: none;
 }
+
 .pressed {
-    color: var(--white);
-    background-color: var(--orange);
+    color: var(--white) !important;
+    background-color: var(--lightGrey) !important;
 }
 
-/* Footer */
-footer { 
-    font-size: 11px; 
-    text-align: center; 
-}
-footer a {
-    color: hsl(228, 45%, 44%); 
-}
-
-/* Desktop */
-@media screen and (min-width: 700px) {
+@media screen and (min-width:700px) {
     main {
-        width: 28%;
-        margin: 10% auto;
-    }
-    button:hover {
-        background-color: var(--white);
-        color: var(--orange);
-        cursor: pointer;
-    }
-    .button5:hover {
-        background-color: var(--orange);
-        color: var(--white);
-        cursor: pointer;
-    }
-}
-
-/* Mobile */
-@media screen and (max-width: 700px) {
-    main {
-        width: 90%;
-        margin: 30% auto;
-    }
-    h1 {
-        font-weight: 700;
+        padding: 2rem 1.75rem 2rem 1.75rem;
+        width: 360px;
     }
 }

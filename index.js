@@ -1,8 +1,8 @@
-var ratingButtons = document.querySelectorAll(".button5");
-var submit = document.querySelector("button");
-var box1 = document.querySelector(".box1");
-var box2 = document.querySelector(".box2");
-var outOf5 = document.querySelector(".outof5");
+var ratingButtons = document.querySelectorAll("a");
+var submitButton = document.querySelector("button");
+var section1 = document.querySelector(".section-rating");
+var section2 = document.querySelector(".section-thankyou");
+var pOutput = document.querySelector(".target");
 var num = 0;
 
 for(var i=0; i<5; i++){
@@ -14,10 +14,13 @@ for(var i=0; i<5; i++){
         num = this.textContent;
 });}
 
-submit.addEventListener("click", function() {
+submitButton.addEventListener("click", function() {
     for(var i=0; i<5; i++){
         var boolean = ratingButtons[i].classList.contains("pressed");
         if(boolean == true){
+            pOutput.textContent = "You selected "+num+" out of 5";
+            section1.classList.add("hidden");
+            section2.classList.remove("hidden");
             break;
         }
     }
@@ -25,7 +28,4 @@ submit.addEventListener("click", function() {
         alert("Kuch toh Daal!");
         return;
     }
-    outOf5.textContent = "You selected "+num+" out of 5";
-    box1.classList.add("hidden");
-    box2.classList.remove("hidden");
 });
